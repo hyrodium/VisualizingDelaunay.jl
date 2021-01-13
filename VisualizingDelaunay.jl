@@ -77,27 +77,27 @@ function draw(ps::Vector{Point2D}, vs::Vector{Vertex} ,es::Vector{Edge} ,fs::Vec
             poly([p1,p2,p3,p1],:fill)
         end
 
-        for i in 1:length(fs)
-            f = fs[i]
-            p1 = Point(ps[f.i1])
-            p2 = Point(ps[f.i2])
-            p3 = Point(ps[f.i3])
-            setline(20)
-            sethue(RGB(1,1,1))
-            poly([p1,p2,p3,p1],:stroke)
-        end
+        # for i in 1:length(fs)
+        #     f = fs[i]
+        #     p1 = Point(ps[f.i1])
+        #     p2 = Point(ps[f.i2])
+        #     p3 = Point(ps[f.i3])
+        #     setline(20)
+        #     sethue(RGB(1,1,1))
+        #     poly([p1,p2,p3,p1],:stroke)
+        # end
 
-        if withcircle
-            setline(3)
-            for i in 1:length(fs)
-                f = fs[i]
-                p1 = Point(ps[f.i1])
-                p2 = Point(ps[f.i2])
-                p3 = Point(ps[f.i3])
-                sethue(indexedcolor(i))
-                circle(p1, p2, p3, :stroke)
-            end
-        end
+        # if withcircle
+        #     setline(3)
+        #     for i in 1:length(fs)
+        #         f = fs[i]
+        #         p1 = Point(ps[f.i1])
+        #         p2 = Point(ps[f.i2])
+        #         p3 = Point(ps[f.i3])
+        #         sethue(indexedcolor(i))
+        #         circle(p1, p2, p3, :stroke)
+        #     end
+        # end
 
         setline(3)
         sethue(RGB(0.5,0.5,0.5))
